@@ -1,0 +1,30 @@
+name:                hlint-test-example
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/Siprj/hlint-test-example#readme
+license:             BSD3
+author:              Jan Sipr
+maintainer:          sipr.jan@gmail.com
+copyright:           BSD3
+category:            test
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+
+executables:
+  hlint-test-example:
+    source-dirs:      src
+    main:             Main.hs
+
+tests:
+  hlint:
+    source-dirs: test
+    main: hlint-test-exe.hs
+    ghc-options:
+      - -threaded
+      - -with-rtsopts=-N
+    dependencies:
+      - hlint-test

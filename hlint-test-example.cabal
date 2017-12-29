@@ -1,0 +1,43 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c07946c76e56799bc7ed39663fa12e95f250cb85a355ea20594303a8db0cc92e
+
+name:           hlint-test-example
+version:        0.1.0.0
+category:       test
+homepage:       https://github.com/Siprj/hlint-test-example#readme
+author:         Jan Sipr
+maintainer:     sipr.jan@gmail.com
+copyright:      BSD3
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+executable hlint-test-example
+  main-is: Main.hs
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  other-modules:
+      Paths_hlint_test_example
+  default-language: Haskell2010
+
+test-suite hlint
+  type: exitcode-stdio-1.0
+  main-is: hlint-test-exe.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hlint-test
+  other-modules:
+      Paths_hlint_test_example
+  default-language: Haskell2010
